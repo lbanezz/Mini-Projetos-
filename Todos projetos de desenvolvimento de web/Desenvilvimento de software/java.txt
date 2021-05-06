@@ -1,0 +1,25 @@
+let twitterBtn = document.getElementById("button-twitter");
+let quote = document.getElementById("quote");
+let author = document.getElementById("author");
+let quotes;
+
+function tweetConsole () {
+console.log("Voce clicou no botao");
+}
+
+function tweetQuote () {
+window.open('https://twitter.com/intent/tweet?text=' + quote.textContent + " - " + author.textContent, '_blank');
+}
+
+async function getQuotes(){
+let url = 'https://api.mocki.io/v1/6b677b8e';
+let response = await fetch(url);
+quotes = await response.json();
+let posicao = Math.floor(Math.random() * quotes.length);
+console.log(posicao);
+
+
+
+twitterBtn.addEventListener("click", tweetQuote)
+getQuotes() 
+}
