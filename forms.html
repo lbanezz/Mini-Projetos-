@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <forms action="http://www.example.com/review.php" method="get">
+        <fieldset>
+            <legend>
+                Detalhes do
+                </lengend>
+                <label>
+                    Nome:
+                    <input type="text" name="name" size="30" maxlength="100"> 
+                </label>
+                <br />
+                <label>
+                    Email:
+                    <input type="text" name="name" size="30" maxlength="100">
+                </label>
+                <br />
+                <legendo>
+                    Sua Revisão:
+                </legendo>
+                <p>
+                    <label for="hear-about">
+                        Como você ficou sabendo sobre nós ?
+                    </label>
+                    <select name="referrer" id="hear-about"> // botão de selecionar
+                        <option value="google">Google</option> // alternativas
+                        <option value="friend">Friend</option>
+                        <option value="advert">Advert</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+                <p>
+                    Você visitaria esse site?
+                    <br />
+                    <label>
+                        <input type="radio" name="rating" value="Sim" />
+                        Sim
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="Não" />
+                        Não
+                    </label>
+                </p>
+                <p>
+                    <label for="comments">
+                        Comentarios:
+                    </label>
+                    <br />
+                    <textarena rows="4" cols="40" id="comments">
+                    </textarena>
+                </p>
+                <label>
+                    <input type="checkbox" name="subscribe" checked="checked" />
+                    Inscreva-me para atualizações por e-mail
+                </label>
+                <br />
+                <input type="submit" value="Submit review" />
+        </fieldset>
+        </form>
+</body>
+
+</html>
